@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楼兰追梦 - 箜篌艺术鉴赏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #fff5e6; /* 浅金色背景 */
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin: 2rem 0;
+            animation: fadeIn 1s ease-in;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s all ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #3498db;
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1.6rem;
+        }
+
+        blockquote {
+            background: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            margin: 1rem 0;
+            padding: 1rem;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dashed transparent;
+        }
+
+        a:hover {
+            border-bottom-color: #3498db;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎶 楼兰追梦 - 箜篌艺术鉴赏</h1>
+
+        <!-- 崔君芝介绍部分 -->
+        <section class="animate-section">
+            <h2>艺术家介绍：崔君芝</h2>
+<img src="" alt="秋演奏图片">
+
+            <div class="audio-player">
+                <h3>艺术成就</h3>
+                <blockquote>中国箜篌艺术的领军人物，深耕演奏与研究数十载，创新改良演奏技法，将箜篌的表现力推向新高度。在《楼兰追梦》中，她以精湛技艺赋予曲子灵魂，用琴弦的震颤唤醒沉睡千年的楼兰记忆，她的手指在琴弦上轻盈地跳跃，仿佛是在弹奏着一首古老的史诗，让人们感受到了箜篌的魅力和魔力。</blockquote>
+
+                <h3>演奏特色</h3>
+                <p>崔君芝的演奏风格融合了传统与现代，她擅长运用轮指、扫弦、滑音等复杂技巧，使箜篌的音色层次丰富，表现力极强。她的演奏不仅展现了箜篌的古典美，更赋予了这件古老乐器新的生命力。</p>
+            </div>
+        </section>
+
+        <!-- 箜篌介绍部分 -->
+        <section class="animate-section">
+            <h2>乐器介绍：箜篌</h2>
+            <h3>历史渊源</h3>
+            <blockquote>起源于汉代西域，后传入中原，唐代达到鼎盛。这件古老乐器承载着丰富的历史文化内涵，是中华音乐宝库中的瑰宝。</blockquote>
+
+            <h3>音色特点</h3>
+            <h4>独特的音色特点，使得箜篌在演奏中能够很好地表现出古代诗词的意境和情感。</h4>
+            <ul>
+                <li>高音区：明亮清脆，如同鸟鸣般悦耳</li>
+                <li>中音区：柔和优美，如同人声般温暖</li>
+                <li>低音区：深沉厚重，如同大地般沉稳</li>
+            </ul>
+
+            <h3>演奏技巧</h3>
+            <p>箜篌的演奏技巧复杂多样，需要演奏者具备较高的技巧和艺术修养，如轮指、扫弦、滑音、拨弦、按弦等操作。这些演奏技巧的运用，使得箜篌能够演奏出丰富多彩的音乐作品。</p>
+        </section>
+
+        <!-- 音频播放部分 -->
+        <section class="animate-section">
+            <h2>聆听箜篌之美</h2>
+            <div class="audio-player">
+                <audio controls>
+        <source src="" type="audio/mpeg">
+        您的浏览器不支持音频播放
+    </audio>
+                
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
